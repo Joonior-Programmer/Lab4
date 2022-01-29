@@ -1,5 +1,4 @@
-﻿using Code1st.Models;
-using code1st_delete_me.Models;
+﻿using code1st_delete_me.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,7 +13,7 @@ public class ApplicationDbContext : IdentityDbContext
 
     public DbSet<City>? City { get; set; }
     public DbSet<Province>? Province { get; set; }
-    
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
