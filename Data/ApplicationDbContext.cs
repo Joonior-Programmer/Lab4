@@ -11,8 +11,7 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    public DbSet<City>? City { get; set; }
-    public DbSet<Province>? Province { get; set; }
+    
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -22,4 +21,7 @@ public class ApplicationDbContext : IdentityDbContext
         modelBuilder.Entity<City>().HasData(SampleData.GetCities());
         modelBuilder.Entity<Province>().HasData(SampleData.GetProvinces());
     }
+
+    public DbSet<City>? City { get; set; }
+    public DbSet<Province>? Province { get; set; }
 }
